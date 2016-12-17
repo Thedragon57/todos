@@ -1,0 +1,6 @@
+<p id="notice"><%= notice %></p>
+<h1>name: <%= @task.name %></h1>
+<p>description: <%= @task.description %></p>
+<p>done: <%= @task.done ? 'u r smart' : 'finish please' %></p>
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>
