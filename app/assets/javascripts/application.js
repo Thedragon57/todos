@@ -14,3 +14,28 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  var i = 100;
+  window.setInterval(function(){
+    if (i >= 1000) {
+      i = 100;
+    }
+    i += 1;
+    var color = "#" + i.toString();
+    console.log(i, color)
+    $('body').css({"background-color": color});
+  }, 500);
+
+
+  var x = 30;
+  window.setInterval(function(){
+    if (x >= 318) {
+      x = 100;
+    }
+    x += 1;
+    var fontSize = x.toString() + "px";
+    console.log(x, fontSize)
+    $('h1').css({"font-size": fontSize});
+  }, 500);
+});
